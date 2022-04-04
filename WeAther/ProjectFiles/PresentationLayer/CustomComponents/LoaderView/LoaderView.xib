@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Regular.ttf">
+            <string>Poppins-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoaderView" customModule="KidsPlatform__development_" customModuleProvider="target">
+            <connections>
+                <outlet property="labelProgress" destination="bZw-za-fHW" id="QlQ-o1-9Iz"/>
+                <outlet property="vwActivity" destination="LEb-Ud-iXn" id="JeR-ha-V6b"/>
+                <outlet property="vwContainer" destination="iN0-l3-epB" id="GWy-eZ-qOJ"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="LoaderView" customModule="KidsPlatform__development_" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tt3-LB-uf3">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="z3P-D8-Njx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    </view>
+                    <blurEffect style="dark"/>
+                </visualEffectView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LEb-Ud-iXn" customClass="NVActivityIndicatorView" customModule="NVActivityIndicatorView">
+                    <rect key="frame" x="162.5" y="308.5" width="50" height="50"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="LEb-Ud-iXn" secondAttribute="height" multiplier="1:1" id="Vmx-QX-v6X"/>
+                        <constraint firstAttribute="width" relation="lessThanOrEqual" constant="80" id="lD4-hz-fon"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="typeName" value="circleStrokeSpin"/>
+                        <userDefinedRuntimeAttribute type="color" keyPath="color">
+                            <color key="value" name="KFYellow"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please wait while validating your request" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bZw-za-fHW">
+                    <rect key="frame" x="52" y="373.5" width="271.5" height="17.5"/>
+                    <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="15"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="tt3-LB-uf3" secondAttribute="bottom" id="3dt-3h-ZKx"/>
+                <constraint firstItem="bZw-za-fHW" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="55J-yl-rYa"/>
+                <constraint firstItem="bZw-za-fHW" firstAttribute="top" secondItem="LEb-Ud-iXn" secondAttribute="bottom" constant="15" id="Tg5-DY-D7N"/>
+                <constraint firstItem="LEb-Ud-iXn" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="50:375" priority="750" id="YjD-qw-VkF"/>
+                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="bZw-za-fHW" secondAttribute="trailing" constant="40" id="dnq-FF-8Tj"/>
+                <constraint firstItem="LEb-Ud-iXn" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="feP-fM-sWb"/>
+                <constraint firstItem="bZw-za-fHW" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="iN0-l3-epB" secondAttribute="leading" constant="40" id="jnv-VC-K6f"/>
+                <constraint firstItem="tt3-LB-uf3" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="mBy-8I-ejB"/>
+                <constraint firstAttribute="trailing" secondItem="tt3-LB-uf3" secondAttribute="trailing" id="pWe-rL-rw3"/>
+                <constraint firstItem="LEb-Ud-iXn" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="sp3-XD-4fc"/>
+                <constraint firstItem="tt3-LB-uf3" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="y7T-78-GeO"/>
+            </constraints>
+            <point key="canvasLocation" x="-272" y="21"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="KFYellow">
+            <color red="1" green="0.74500000476837158" blue="0.035000000149011612" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
